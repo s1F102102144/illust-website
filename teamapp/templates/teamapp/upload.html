@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="main.js"></script>
+    <link href="{% static 'teamapp/css/main.css' %}" rel="stylesheet">
+    <!--link rel="stylesheet" type="text/css" href="{% static 'teamapp/css/main.css' %}"-->
+    <title>teamapp</title>
+    <div class="bg_pattern Paper_v2"></div>
+</head>
+<body>
+    <header id="header">
+        <div class="inner">
+          <img src="{% static 'teamapp/img/logo2.png' %}" alt="logo" width="300" height="100">
+          <p class="navi">
+       
+            <h2>自分のイラストをアップロードしよう！</h2>
+
+            <div id="upload">
+                <h2>画像を登録する</h2>
+                <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <p>{{ upload_form.as_p }}</p>
+                    <p>{{ illust_form.as_p }}</p>
+                    <p><input type="submit" value="アップロード" class="btn-flat-border"></p>
+                </form>
+                <div>
+                  {% if id is not None %}
+                  <h2>画像が正常に登録されました</h2>
+                  <p>{{title}}  を今すぐ投稿しよう！</p>
+                  <div class="button003">
+                    <a href="{% url 'preview' id %}">画像を投稿する</a>
+                    {% endif %}
+                  </div>
+                </div>
+            </div>
+            </p>
+        </div>
+        
+      </header>
+      <div class="button003">
+        <a href="{% url 'index' %}">トップへ戻る</a></div>
+    <hr>
+    <p>ユーザー名：{{ user.username }}</p>
+</body>
+</html>

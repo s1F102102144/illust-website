@@ -1,0 +1,215 @@
+.bg_pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: -1;
+}
+.Paper_v2 {
+  background-image:
+  repeating-linear-gradient(to bottom,
+    transparent 25px,
+    rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
+    transparent 27px,  transparent 51px, 
+    rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
+    transparent 53px,  transparent 77px, 
+    rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
+    transparent 79px,  transparent 103px, 
+    rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
+    transparent 105px,  transparent 129px, 
+    rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px),
+
+  repeating-linear-gradient(to right,
+    transparent 25px,
+    rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
+    transparent 27px,  transparent 51px, 
+    rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
+    transparent 53px,  transparent 77px, 
+    rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
+    transparent 79px,  transparent 103px, 
+    rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
+    transparent 105px,  transparent 129px, 
+    rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px);
+}
+
+body {
+  text-align: center;
+  font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: .025em;
+  line-height: 1.8;
+}
+
+__________________
+
+.wrapper{
+  width:100%;
+}
+.wrapper .container{
+  max-width:1000px;
+  margin:0px auto;
+  padding:80px 0px;
+}
+
+
+.wrapper .content {
+  padding:50px;
+  text-align:center;
+}
+.wrapper .content .heading{
+  margin:0px 0px 40px 0px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.btn-flat-border {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  background: #ffffff;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.btn-flat-border:hover {
+  background: #67c5ff;
+  color: white;
+}
+
+
+
+.button003 a {
+  background: #eee;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 260px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+.button003 a:hover {
+  background: #313131;
+  color: #FFF;
+}
+.button003 a:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #313131;
+  border-right: 3px solid #313131;
+  transform: rotate(45deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+.button003 a:hover:after {
+  border-color: #FFF;
+}
+
+.preimg {
+  width: 400px;
+
+}
+.preimgindex{
+  width: 350px;
+}
+
+.illust{
+  border-radius: 10px;
+  border-top : solid 1px #dcdcdc;
+    border-right : solid 1px #b3b3b3 ;
+    border-bottom : solid 1px #535353 ;
+    border-left : solid 1px #b3b3b3 ;
+  background-color: rgba(209, 209, 209, 0.6);
+}
+
+
+
+.illusttitle{
+  font-size: larger;
+  font-weight: bold;
+}
+
+.img-wrap {
+  animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes img-wrap {
+  0% {
+    clip-path: circle(0 at 50% 50%);
+    -webkit-clip-path: circle(0 at 50% 50%);
+  }
+
+  100% {
+    clip-path: circle(100% at 50% 50%);
+    -webkit-clip-path: circle(100% at 50% 50%);
+  }
+}
+
+.button_solid012 a {
+  background: #ff0000;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 240px;
+  padding: 10px 5px;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  border: 2px solid #000;
+  z-index: 1;
+  border-radius: 5px;
+}
+.button_solid012 a:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #ff6b6b;
+  z-index: -1;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+.button_solid012 a:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: translate3d(0,0.40rem,-1rem);
+  transform: translate3d(0,0.40rem,-1rem);
+  border: 2px solid #000;
+  border-radius: inherit;
+  background: #ff0000;
+  -webkit-box-shadow: 0 0.6rem 0 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 0.4rem 0 0 rgb(0 0 0 / 20%);
+  z-index: -2;
+}
+.button_solid012 a i {
+  position: absolute;
+  right: 9px;
+}
+.button_solid012 a:hover {
+  transform: translate3d(0,0.2rem,-1rem);
+}
+.button_solid012 a:hover:after {
+  transform: translate3d(0,0.2rem,-1rem);
+  box-shadow: 0 0.2rem 0 0 rgb(0 0 0 / 20%);
+}

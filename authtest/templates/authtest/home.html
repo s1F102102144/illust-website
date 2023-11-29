@@ -1,0 +1,26 @@
+{% load static %}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link href="{%static 'teamapp\css\main.css' %}" rel="stylesheet">
+    <div class="bg_pattern Paper_v2"></div>
+  </head>
+  <body>
+
+
+    {% if user.is_authenticated %}
+    <p>{{ user.username }}さん  ログインに成功しました。</p>
+    <div class="button003">
+      <p><a href="{% url 'index' %}">サイトに移動</a></p>
+      <a href="{% url 'logout' %}">ログアウト</a>
+    </div>
+
+      {% else %}
+      <p>このサイトを利用するにはアカウントのログインが必要です。
+      </p>
+    <div class="button003">
+      <p><a href="{% url 'login' %}">ログイン</a></p>
+      {% endif %}
+    </div>
+</body>
+</html>

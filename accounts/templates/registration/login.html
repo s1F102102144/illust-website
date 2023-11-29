@@ -1,0 +1,22 @@
+{% load static %}
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link href="{%static 'teamapp\css\main.css' %}" rel="stylesheet">
+  <div class="bg_pattern Paper_v2"></div>
+</head>
+  <body>
+    <h1>ログイン</h1>
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="ログイン" class="btn-flat-border" />
+    </form>
+    <div class="button003">
+      <p><a href="{% url 'index' %}">トップページに戻る</a></p>
+    </div>
+  </body>
+</html>

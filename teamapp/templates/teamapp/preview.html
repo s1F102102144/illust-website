@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <link href="{% static 'teamapp/css/main.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'teamapp/js/like.js' %}"></script>
+    <title>{{title}}</title>
+    <div class="bg_pattern Paper_v2"></div>
+</head>
+<body>
+    <h1>投稿したイラスト</h1>
+    <hr>
+    <div>
+        <img src="{{url}}" class="preimg">
+        <h2>タイトル:{{title}}</h2>
+        <p>{{detail}}</p>
+        <div>
+            <p>頑張ったところ: {{point}}</p>
+            <p>直したいところ: {{dissapoint}}</p>
+        </div>
+        <div class="button_solid012">
+            <p><a href="javascript:void(0);" onclick="like({{id}});" >
+            {% csrf_token %}
+            いいね！ <span id="like{{id}}" >{{ like }}</span></a></p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="button003">
+        <a href="{% url 'index' %}" >トップへ戻る</a></div>
+    <hr>
+    <p>ユーザー名：{{ user.username }}</p>
+</body>
+</html>
